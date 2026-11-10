@@ -1,0 +1,272 @@
+{
+ "source": "unique-corpus-v1, Backboard's 8,000-scenario catalogue of public-dataset prompts (not published here)",
+ "source_sha256": "4bba00d4b1ae8b0f4b3fefb9c2862a590e6b293533f3afa95157a831230fbff0",
+ "seed": 20261102,
+ "mix": {
+  "short": 3,
+  "long": 2,
+  "thinking": 2,
+  "tool": 1
+ },
+ "output_budget": {
+  "short": 4096,
+  "long": 4096,
+  "thinking": 12288,
+  "tool": 4096
+ },
+ "files": {
+  "bursts.json": {
+   "sha256": "14aa0516821b8da88af44e6e89e769842a6c5dadaf3216d3416f297876874dec",
+   "scenarios": 1512,
+   "kinds": {
+    "short": 567,
+    "tool": 189,
+    "long": 378,
+    "thinking": 378
+   },
+   "batches": {
+    "r0-c8": {
+     "short": 3,
+     "tool": 1,
+     "long": 2,
+     "thinking": 2,
+     "approx_prompt_tokens": 40835
+    },
+    "r0-c16": {
+     "short": 6,
+     "tool": 2,
+     "thinking": 4,
+     "long": 4,
+     "approx_prompt_tokens": 68059
+    },
+    "r0-c32": {
+     "short": 12,
+     "thinking": 8,
+     "long": 8,
+     "tool": 4,
+     "approx_prompt_tokens": 150787
+    },
+    "r0-c64": {
+     "short": 24,
+     "long": 16,
+     "thinking": 16,
+     "tool": 8,
+     "approx_prompt_tokens": 264417
+    },
+    "r0-c128": {
+     "long": 32,
+     "thinking": 32,
+     "short": 48,
+     "tool": 16,
+     "approx_prompt_tokens": 504630
+    },
+    "r0-c256": {
+     "long": 64,
+     "thinking": 64,
+     "short": 96,
+     "tool": 32,
+     "approx_prompt_tokens": 836683
+    },
+    "r1-c8": {
+     "thinking": 2,
+     "long": 2,
+     "short": 3,
+     "tool": 1,
+     "approx_prompt_tokens": 36197
+    },
+    "r1-c16": {
+     "tool": 2,
+     "thinking": 4,
+     "long": 4,
+     "short": 6,
+     "approx_prompt_tokens": 51500
+    },
+    "r1-c32": {
+     "tool": 4,
+     "long": 8,
+     "thinking": 8,
+     "short": 12,
+     "approx_prompt_tokens": 84013
+    },
+    "r1-c64": {
+     "short": 24,
+     "thinking": 16,
+     "long": 16,
+     "tool": 8,
+     "approx_prompt_tokens": 203856
+    },
+    "r1-c128": {
+     "short": 48,
+     "thinking": 32,
+     "long": 32,
+     "tool": 16,
+     "approx_prompt_tokens": 388295
+    },
+    "r1-c256": {
+     "long": 64,
+     "thinking": 64,
+     "short": 96,
+     "tool": 32,
+     "approx_prompt_tokens": 677929
+    },
+    "r2-c8": {
+     "short": 3,
+     "thinking": 2,
+     "long": 2,
+     "tool": 1,
+     "approx_prompt_tokens": 20485
+    },
+    "r2-c16": {
+     "thinking": 4,
+     "short": 6,
+     "long": 4,
+     "tool": 2,
+     "approx_prompt_tokens": 26793
+    },
+    "r2-c32": {
+     "thinking": 8,
+     "long": 8,
+     "short": 12,
+     "tool": 4,
+     "approx_prompt_tokens": 39502
+    },
+    "r2-c64": {
+     "short": 24,
+     "long": 16,
+     "thinking": 16,
+     "tool": 8,
+     "approx_prompt_tokens": 131666
+    },
+    "r2-c128": {
+     "tool": 16,
+     "short": 48,
+     "long": 32,
+     "thinking": 32,
+     "approx_prompt_tokens": 247151
+    },
+    "r2-c256": {
+     "long": 64,
+     "short": 96,
+     "tool": 32,
+     "thinking": 64,
+     "approx_prompt_tokens": 606880
+    }
+   }
+  },
+  "s-c64.json": {
+   "sha256": "0e8bf03113271a7dc33f53652081cfdad89b2932e75c22c904603d35d312fb24",
+   "scenarios": 256,
+   "kinds": {
+    "short": 96,
+    "thinking": 64,
+    "long": 64,
+    "tool": 32
+   },
+   "batches": {
+    "s-c64.json": {
+     "short": 96,
+     "thinking": 64,
+     "long": 64,
+     "tool": 32,
+     "approx_prompt_tokens": 530104
+    }
+   }
+  },
+  "s-c128.json": {
+   "sha256": "8b7b0b366aaa103dae9332d61251626ce562ab62c9c916c20b58f039e0873883",
+   "scenarios": 512,
+   "kinds": {
+    "tool": 64,
+    "thinking": 128,
+    "short": 192,
+    "long": 128
+   },
+   "batches": {
+    "s-c128.json": {
+     "tool": 64,
+     "thinking": 128,
+     "short": 192,
+     "long": 128,
+     "approx_prompt_tokens": 1048555
+    }
+   }
+  },
+  "s-c256.json": {
+   "sha256": "b4b0185bf03f9f3c7ff6a8fc4e04e32af13bbec93141ab8371b7efa9e5ee7a07",
+   "scenarios": 1024,
+   "kinds": {
+    "short": 384,
+    "tool": 128,
+    "long": 256,
+    "thinking": 256
+   },
+   "batches": {
+    "s-c256.json": {
+     "short": 384,
+     "tool": 128,
+     "long": 256,
+     "thinking": 256,
+     "approx_prompt_tokens": 2107372
+    }
+   }
+  },
+  "s-c8.json": {
+   "sha256": "d24c8365952f9c5d830a470e879247f92960eb3fff8fa772b6f79fe23a14b671",
+   "scenarios": 64,
+   "kinds": {
+    "long": 16,
+    "short": 24,
+    "thinking": 16,
+    "tool": 8
+   },
+   "batches": {
+    "s-c8.json": {
+     "long": 16,
+     "short": 24,
+     "thinking": 16,
+     "tool": 8,
+     "approx_prompt_tokens": 153376
+    }
+   }
+  },
+  "s-c16.json": {
+   "sha256": "c412cff5ff7cf807ef65804fec5080278995261a8333d0757a251e0696c14aa5",
+   "scenarios": 128,
+   "kinds": {
+    "thinking": 32,
+    "long": 32,
+    "short": 48,
+    "tool": 16
+   },
+   "batches": {
+    "s-c16.json": {
+     "thinking": 32,
+     "long": 32,
+     "short": 48,
+     "tool": 16,
+     "approx_prompt_tokens": 285493
+    }
+   }
+  },
+  "s-c32.json": {
+   "sha256": "11c2ac3d8b224244fbc3c97ec65824a4b59bd6e7de2024e8c680642ad71f6b4e",
+   "scenarios": 256,
+   "kinds": {
+    "short": 96,
+    "tool": 32,
+    "thinking": 64,
+    "long": 64
+   },
+   "batches": {
+    "s-c32.json": {
+     "short": 96,
+     "tool": 32,
+     "thinking": 64,
+     "long": 64,
+     "approx_prompt_tokens": 501583
+    }
+   }
+  }
+ },
+ "builder": "build_c256.py --reps 3 --seed 20261102 (Backboard's builder; the seed and source hash above reproduce the files)"
+}

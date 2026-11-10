@@ -1,0 +1,95 @@
+{
+ "description": "The tools and fixture behind the four Backboard-written tool rows (ids tool:builtin:*) in each benchmark. Those rows have no tools field of their own: send these three tools with them, and answer each call from the fixture below. Everything is fictional and deterministic, so a row's tool results never depend on the server.",
+ "tools": [
+  {
+   "type": "function",
+   "function": {
+    "name": "inventory_lookup",
+    "description": "Read the local fictional fixture; integer monetary amounts are cents.",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "sku": {
+       "type": "string"
+      }
+     },
+     "required": [
+      "sku"
+     ],
+     "additionalProperties": false
+    }
+   }
+  },
+  {
+   "type": "function",
+   "function": {
+    "name": "lookup_order",
+    "description": "Read the local fictional fixture; integer monetary amounts are cents.",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "order_id": {
+       "type": "string"
+      }
+     },
+     "required": [
+      "order_id"
+     ],
+     "additionalProperties": false
+    }
+   }
+  },
+  {
+   "type": "function",
+   "function": {
+    "name": "calculate_totals",
+    "description": "Read the local fictional fixture; integer monetary amounts are cents.",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "unit_cents": {
+       "type": "integer"
+      },
+      "quantity": {
+       "type": "integer"
+      }
+     },
+     "required": [
+      "unit_cents",
+      "quantity"
+     ],
+     "additionalProperties": false
+    }
+   }
+  }
+ ],
+ "fixture": {
+  "inventory": {
+   "PEN": {
+    "sku": "PEN",
+    "stock": 17,
+    "unit_cents": 125
+   },
+   "BOOK": {
+    "sku": "BOOK",
+    "stock": 8,
+    "unit_cents": 600
+   }
+  },
+  "orders": {
+   "O-17": {
+    "order_id": "O-17",
+    "sku": "BOOK",
+    "quantity": 3
+   }
+  }
+ },
+ "behaviour": {
+  "inventory_lookup": "Return the inventory entry for sku, or {\"error\": \"not_found\", \"sku\": <sku>}.",
+  "lookup_order": "Return the order for order_id, or {\"error\": \"not_found\", \"order_id\": <order_id>}.",
+  "calculate_totals": "Return {\"total_cents\": quantity * unit_cents}. quantity must be 0-10,000 and unit_cents 0-1,000,000.",
+  "arguments": "A call with an unknown tool name, missing or extra argument keys, or a wrong argument type (string vs integer) is an error, and the row fails.",
+  "results": "Send each result back as a tool message whose content is the result object as JSON."
+ },
+ "grading": "A row's grader is tool_calls with an expected_json. It passes when the calls the model made, as [name, arguments] pairs, are the calls in expected_calls, in any order, with arguments compared after normalizing (string case and spacing ignored, numeric strings equal to numbers), and its final answer, parsed as JSON (a code fence around it is allowed), equals expected_json. A row may use at most four rounds of tool calls."
+}
